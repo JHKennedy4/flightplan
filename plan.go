@@ -1,8 +1,8 @@
 package main
 
 import (
-	"flightplan/qpx"
 	"fmt"
+	"github.com/jhkennedy4/go-qpx"
 	"io/ioutil"
 	"net/http"
 	"os"
