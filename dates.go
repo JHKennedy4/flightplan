@@ -30,12 +30,15 @@ func PickDates(startDate string, endDate string, vacation int) []Dates {
 		// start interval is always start
 		// get nearest weekend
 		// get slice of time prior to weekend
+
 		// if duration is less than time prior to weekend
 		// subtract duration prior to weekend
 		// get remaining vacation
+
 		// get nearest weekend
 		// get slice of time prior to weekend
 		// if duration is less than time prior to weekend
+
 		// subtract duration prior to weekend
 		// else
 		// end := weekend + remaining vacation
