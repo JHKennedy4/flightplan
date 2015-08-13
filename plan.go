@@ -2,13 +2,14 @@ package main
 
 import (
 	"fmt"
-	"github.com/jhkennedy4/go-qpx"
 	"io/ioutil"
 	"net/http"
 	"os"
+
+	"github.com/jhkennedy4/go-qpx"
 )
 
-const API_URL string = "https://www.googleapis.com/qpxExpress/v1/trips/search?key=AIzaSyDQtBe0oh9yTcqZkSeydYNLm8rK9Q2oQV4"
+var API_URL string = "https://www.googleapis.com/qpxExpress/v1/trips/search?key=" + os.Getenv("QPX_KEY")
 
 const (
 	origin = iota
