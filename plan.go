@@ -19,12 +19,13 @@ const (
 )
 
 func main() {
+	fmt.Println(API_URL)
 	args := os.Args[1:]
 
 	var args_length int = len(args)
 	// usage
 	if args_length < 4 {
-		fmt.Println("Usage: plan origin destination start_date end_date")
+		fmt.Println("Usage: plan origin destination start_date end_date [YYYY-MM-DD]")
 		// [vacations_days] [start_date] [end_date] (format: YYYY-MM-DD[ HH[:MM[:SS]]])")
 		return
 	}
@@ -40,7 +41,7 @@ func main() {
 
 	defer resp.Body.Close()
 	body, err := ioutil.ReadAll(resp.Body)
-	//fmt.Printf("%s", body)
+	// fmt.Printf("%s", body)
 	r := qpx.ParseResponse(body)
 
 	fmt.Printf("%s", r.PrettyPrint())
